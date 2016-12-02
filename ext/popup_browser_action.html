@@ -1,0 +1,15 @@
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	chrome.runtime.onMessage.addListener(
+		function(request, sender, sendResponse) {
+			var fileName = "PingasWaffles";
+			var link = request.greeting;
+			document.getElementById("a").href = link;
+			document.getElementById("a").download = fileName;
+			console.log("PINGAS");
+			return true;
+		}
+	);
+	console.log("Tis part is working")
+});
+</script>
